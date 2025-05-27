@@ -28,7 +28,7 @@ jobs:
           pip install pytest
 
       - name: Run tests
-        run: pytest test.py
+        run: pytest tests/test.py
 
   deploy:
     needs: test
