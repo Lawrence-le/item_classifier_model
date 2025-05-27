@@ -1,0 +1,42 @@
+# Ignore Python virtual environments
+
+venv/
+env/
+**pycache**/
+_.pyc
+_.pyo
+\*.pyd
+
+# Ignore caches and temp files
+
+.pytest*cache/
+*.cache
+\_.log
+\*.sqlite3
+
+# Ignore git and Docker files
+
+.git/
+.gitignore
+.dockerignore
+
+# Ignore IDE/editor config files
+
+.vscode/
+.idea/
+
+# Ignore environment variable files (optional, for security)
+
+.env
+.env.\*
+
+# Ignore build artifacts
+
+build/
+dist/
+\*.egg-info/
+
+# Ignore system files
+
+.DS_Store
+Thumbs.db

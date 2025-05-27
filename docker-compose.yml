@@ -1,0 +1,9 @@
+services:
+  mobilenet_app:
+    build: .
+    container_name: item_classifier_container
+    command: python3 item_classifier.py
+    ports:
+      - "7860:7860"
+    volumes:
+      - .:/app
