@@ -89,3 +89,6 @@ uploads/
 # Misc
 *.swp
 *.tmp
+
+# Gradio
+.gradio/
