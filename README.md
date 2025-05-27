@@ -6,3 +6,18 @@
 
 `docker-compose up`
 `docker-compose down`
+
+# Gradio UI
+
+---
+
+title: Item Classifier App
+emoji: 🖼️
+colorFrom: blue
+colorTo: green
+sdk: gradio
+sdk_version: "5.31.0"
+app_file: app.py
+pinned: false
+
+---
