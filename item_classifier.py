@@ -106,12 +106,17 @@ def predict(image, model_type):
 with gr.Blocks() as app:
     gr.Markdown("## Image Classifier App")
 
+    gr.Markdown("---")
+    gr.Markdown("### Convert Your Images into Training Data (Not Mandatory)")
     with gr.Row():
         img_files = gr.File(file_types=["image"], file_count="multiple", label="Upload Multiple Images")
         label_input = gr.Dropdown(choices=CLASSES, value="Cat", label="Label")
     save_btn = gr.Button("Save Images to Dataset")
     save_output = gr.Textbox(label="Save Status")
     save_btn.click(fn=collect_multiple_images, inputs=[img_files, label_input], outputs=save_output)
+
+    gr.Markdown("---")
+    gr.Markdown("### Train")
 
     with gr.Row():
         model_choice_train = gr.Dropdown(choices=["MobileNetV2", "CNN"], value="MobileNetV2", label="Select Model to Train")

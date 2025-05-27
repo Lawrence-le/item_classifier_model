@@ -18,7 +18,8 @@ A **Gradio-powered** **neural network** image classification app that lets users
 
 ## Features
 
-- Upload an image and get an instant item prediction powered by neural networks
+- Train model using images in item_data folder or use your own images!
+- After model is trained, upload an image and get an instant item prediction powered by neural networks
 - Choose between a lightweight **MobileNetV2** or **custom CNN model**
 - Built using **TensorFlow** and **Keras** deep learning frameworks
 - Dockerized deployment support
@@ -75,6 +76,8 @@ A convolutional neural network built and trained fully from scratch on the custo
 - In contrast, the custom CNN is trained from scratch on a very small dataset (only 12 images), limiting its ability to learn complex features and generalize beyond the training samples. Transfer learning with MobileNetV2 leverages learned low- and mid-level features that improve accuracy, especially when training data is limited.
 
 ## 📊 Dataset
+
+Found in item_data/
 
 - **Classes:** `Cat` and `Dog`
 - **Training Size:** 12 images per class (total 24)
