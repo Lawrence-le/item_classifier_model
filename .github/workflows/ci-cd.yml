@@ -41,15 +41,17 @@ jobs:
       - name: Build Docker image
         run: docker build -t myapp:latest .
 
-      - name: Install huggingface_hub
-        run: pip install huggingface_hub
+      - name: Install Git
+        run: sudo apt-get update && sudo apt-get install -y git
 
-      - name: Authenticate Hugging Face CLI
+      - name: Configure Git user
+        run: |
+          git config --global user.email "lawrence_mklee@hotmail.com"
+          git config --global user.name "Lawrence-le"
+
+      - name: Push to Hugging Face Space
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: huggingface-cli login --token $HF_TOKEN
-
-      - name: Push to Hugging Face Space repo
         run: |
-          git remote add hf https://huggingface.co/spaces/lawrencecodes/item_classifier_model
+          git remote add hf https://user:${HF_TOKEN}@huggingface.co/spaces/lawrencecodes/item_classifier_model
           git push hf main --force
